@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controllers/first_class.dart';
+import 'package:flutter_application_1/first_class.dart'; // Import the FirstPage class
 import 'package:flutter_application_1/controllers/tap_controller.dart';
+import 'package:flutter_application_1/second_page.dart';
+
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -142,7 +143,8 @@ class MyHomePage extends StatelessWidget {
 
 
  GestureDetector(
-              onTap: () {
+              onTap: () { 
+                Get.to(()=>SecondPage());
                 
               },
               child: Container(
@@ -155,7 +157,7 @@ class MyHomePage extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    "tap",
+                    "Second Page",
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
